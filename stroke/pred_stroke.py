@@ -23,6 +23,11 @@ def predict_stroke (Age, Hypertension, Heart_Disease, BMI, Avg_Glucose, Diabetes
     with open(model_path, 'rb') as file:
         lreg = pickle.load(file)
 
-    prediction = lreg.predict([[Age, Hypertension, Heart_Disease, BMI, Avg_Glucose, Diabetes, Gender]])
+    with open('/path/to/scaler.pkl', 'rb') as file:
+        scaler = pickle.load(file)
+
+    input_data = [[Age, Hypertension, Heart_Disease, BMI, Avg_Glucose, Diabetes, Gender]]
+    scaled_input = scaler.transform(input_data)
+    prediction = lreg.predict(scaled_input)
 
     return prediction

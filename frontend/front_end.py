@@ -148,7 +148,7 @@ with col1:
     st.write("Please enter the patient's details below to predict stroke risk.")
 
     # Input fields with sliders for numeric values
-    age = st.slider("Age", min_value=18, max_value=120, value=50, step=1,
+    age = st.slider("Age", min_value=25, max_value=100, value=50, step=1,
                   help="Patient's age in years")
 
     gender = st.radio("Gender", ["Female", "Male"])
@@ -163,11 +163,11 @@ with col1:
     diabetes = st.checkbox("Diabetes")
     diabetes_value = 1 if diabetes else 0
 
-    bmi = st.slider("BMI", min_value=10.0, max_value=50.0, value=25.0, step=0.1,
+    bmi = st.slider("BMI", min_value=15.0, max_value=45.0, value=25.0, step=0.1,
                   help="Body Mass Index (weight in kg / height in m²)")
 
     avg_glucose = st.slider("Average Glucose Level (mg/dL)",
-                          min_value=0.0, max_value=300.0, value=100.0, step=1.0,
+                          min_value=45.0, max_value=175.0, value=100.0, step=1.0,
                           help="Average blood glucose level in mg/dL")
 
     # Red prediction button
