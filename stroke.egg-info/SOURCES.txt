@@ -1,0 +1,15 @@
+.gitignore
+README.md
+requirements.txt
+setup.py
+stroke/__init__.py
+stroke/api.py
+stroke/pred_stroke.py
+stroke.egg-info/PKG-INFO
+stroke.egg-info/SOURCES.txt
+stroke.egg-info/dependency_links.txt
+stroke.egg-info/requires.txt
+stroke.egg-info/top_level.txt
+strokesenseapp/data/stroke_data.csv
+strokesenseapp/models/lreg_model.pkl
+strokesenseapp/notebooks/lr.ipynb
